@@ -52,6 +52,7 @@ pages
 </pre>
 
 4. Nested dynamic routes: 
+
 localhost:3000/product/:productId/review/:reviewId
 
 <pre>
@@ -65,3 +66,21 @@ pages
                |- index.tsx: localhost:3000/product/1/review
                |- [reviewId].tsx: localhost:3000/product/1/review/1
 </pre>
+
+5. Catch all routes: adds three dots inside square brackets to create catch all routes.
+
+- Purpose: use for different URLs for the same page layout or use for pages with optional route parameters.
+
+<pre>
+pages
+  |- index.tsx: localhost:3000/
+  |- docs
+      |- [...param].tsx: will catch all routes after docs/ but does not catch docs/
+            localhost:3000/docs -> 404 error
+            localhost:3000/docs/1/2/3
+            localhost:3000/docs/first/second/3
+            ...
+      |- [[...param]].tsx: will catch all routes after docs/ AND docs/ itself
+
+</pre>
+
