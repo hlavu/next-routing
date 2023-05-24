@@ -104,3 +104,7 @@ pages
     <button onClick={handleClicked}>Click me!</button>
 </pre>
 
+8. Customize 404 error file. 
+
+- Next.js automatically created 404 error file.
+- To customize it, simply created a new file named `404.js`
