@@ -51,3 +51,17 @@ pages
          * bookId can be any type such as number, string
 </pre>
 
+4. Nested dynamic routes: 
+localhost:3000/product/:productId/review/:reviewId
+
+<pre>
+pages
+  |- index.tsx: localhost:3000/
+  |- product
+      |- index.tsx: localhost:3000/product
+      |- [productId]
+           |- index.tsx: localhost:3000/product/1
+           |- review
+               |- index.tsx: localhost:3000/product/1/review
+               |- [reviewId].tsx: localhost:3000/product/1/review/1
+</pre>
