@@ -94,3 +94,13 @@ pages
     `replace` keyword is used to replace URL history instead of adding it to stack.
 </pre>
 
+7. Navigating programmatically: uses `router.push()` method from `useRouter` hook.
+
+<pre>
+    const handleClicked = () => {
+        router.push("/about") or
+        router.replace("/about")
+    }
+    <button onClick={handleClicked}>Click me!</button>
+</pre>
+

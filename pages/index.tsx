@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -7,6 +8,11 @@ import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+  const handleClicked = () => {
+    router.push("/about");
+    // router.replace("/about");
+  };
   return (
     <>
       <Head>
@@ -26,6 +32,9 @@ export default function Home() {
       <Link className={styles.link} href="/book">
         Book
       </Link>
+      <button className={styles.btn} onClick={handleClicked}>
+        View our story!
+      </button>
     </>
   );
 }
