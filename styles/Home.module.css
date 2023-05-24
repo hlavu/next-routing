@@ -2,3 +2,11 @@
   text-align: center;
   margin-top: 50px;
 }
+
+.link {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.link:hover {
+  color: red;
+}

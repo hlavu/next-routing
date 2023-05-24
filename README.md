@@ -84,3 +84,13 @@ pages
 
 </pre>
 
+6. Link component navigation: navigates by clicking to an element.
+
+<pre>
+    import Link from "next/link";
+    <Link className={styles.link} href="/" replace>
+        Text
+    </Link>
+    `replace` keyword is used to replace URL history instead of adding it to stack.
+</pre>
+

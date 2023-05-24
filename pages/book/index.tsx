@@ -1,9 +1,14 @@
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 export default function BookPage() {
   return (
     <>
       <h1 className={styles.heading}> This is BOOK page</h1>
+
+      <Link className={styles.link} href="/">
+        Back to home
+      </Link>
     </>
   );
 }
